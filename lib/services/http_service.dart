@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:http/http.dart';
-import 'package:pardemo/model/emp_model.dart';
 import 'package:pardemo/model/emplist_model.dart';
 import 'package:pardemo/model/empone_model.dart';
 import 'package:pardemo/model/user_model.dart';
@@ -89,10 +88,8 @@ class Network {
 
   /* Http Parsing */
 
-  /* Http Parsing */
-
-  static EmpList parseEmpList(String body){
-    dynamic json = jsonDecode(body);
+  static EmpList parseEmpList(String response){
+    dynamic json = jsonDecode(response);
     var data = EmpList.fromJson(json);
     return data;
   }

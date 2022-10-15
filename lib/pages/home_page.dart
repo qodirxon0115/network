@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pardemo/model/emp_model.dart';
 import 'package:pardemo/model/emplist_model.dart';
+import 'package:pardemo/pages/showEmp_page.dart';
 import 'package:pardemo/services/http_service.dart';
 
 class HomePage extends StatefulWidget {
@@ -61,16 +62,21 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget itemOfList(Employee emp) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      margin: const EdgeInsets.only(bottom: 1),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text("${emp.employee_name}(${emp.employee_age})",style: const TextStyle(color: Colors.black,fontSize: 20),),
-          const SizedBox(height: 10,),
-          Text("${emp.employee_salary}\$",style: const TextStyle(color: Colors.black,fontSize: 18),),
-        ],
+    return GestureDetector(
+      onTap: (){
+        Navigator.pushReplacementNamed(context, SowPage.id);
+      },
+      child: Container(
+        padding: const EdgeInsets.all(20),
+        margin: const EdgeInsets.only(bottom: 1),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("${emp.employee_name}(${emp.employee_age})",style: const TextStyle(color: Colors.black,fontSize: 20),),
+            const SizedBox(height: 10,),
+            Text("${emp.employee_salary}\$",style: const TextStyle(color: Colors.black,fontSize: 18),),
+          ],
+        ),
       ),
     );
   }
