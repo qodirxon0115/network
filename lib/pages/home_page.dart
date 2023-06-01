@@ -72,9 +72,9 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("${emp.employee_name}(${emp.employee_age})",style: const TextStyle(color: Colors.black,fontSize: 20),),
+            Text("${emp.employeeName}(${emp.profileImage})",style: const TextStyle(color: Colors.black,fontSize: 20),),
             const SizedBox(height: 10,),
-            Text("${emp.employee_salary}\$",style: const TextStyle(color: Colors.black,fontSize: 18),),
+            Text("${emp.employeeSalary}\$",style: const TextStyle(color: Colors.black,fontSize: 18),),
           ],
         ),
       ),

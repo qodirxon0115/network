@@ -1,23 +1,23 @@
 class Employee {
 
   int id;
-  String employee_name;
-  int employee_salary;
-  int employee_age;
-  String profile_image;
+  String employeeName;
+  int employeeSalary;
+  int employeeAge;
+  String profileImage;
 
   Employee.fromJson(Map<String, dynamic> json)
       : id = json['id'],
-        employee_name = json['employee_name'],
-        employee_salary = json['employee_salary'],
-        employee_age = json['employee_age'],
-        profile_image = json['profile_image'];
+        employeeName = json['employee_name'],
+        employeeSalary = json['employee_salary'],
+        employeeAge = json['employee_age'],
+        profileImage = json['profile_image'];
 
   Map<String, dynamic> toJson() => {
     'id': id,
-    'employee_name': employee_name,
-    'employee_salary': employee_salary,
-    'employee_age': employee_age,
-    'profile_image': profile_image,
+    'employee_name': employeeName,
+    'employee_salary': employeeSalary,
+    'employee_age': employeeAge,
+    'profile_image': profileImage,
   };
 }
