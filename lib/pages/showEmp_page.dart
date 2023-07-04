@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pardemo/model/empone_model.dart';
+import 'package:pardemo/model/myself_model.dart';
 
 import '../model/emp_model.dart';
 import '../services/http_service.dart';
@@ -25,8 +26,8 @@ class _SowPageState extends State<SowPage> {
   }
 
   void _showResponse(String response) {
-    EmpOne empOne = Network.parseEmpOne(response);
-    print(empOne);
+    Myself myself = Network.parseEmpOne(response);
+    print(myself);
   }
 
   @override

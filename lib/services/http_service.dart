@@ -2,10 +2,11 @@ import 'dart:convert';
 import 'package:http/http.dart';
 import 'package:pardemo/model/emplist_model.dart';
 import 'package:pardemo/model/empone_model.dart';
+import 'package:pardemo/model/myself_model.dart';
 import 'package:pardemo/model/user_model.dart';
 
 class Network {
-  static String BASE = "dummy.restapiexample.com";
+  static String BASE = "api.github.com";
   static Map<String, String> headers = {
     'Content-Type': 'application/json; charset=UTF-8'
   };
@@ -13,7 +14,7 @@ class Network {
   /* Http Apis */
 
   static String API_EMP_LIST = "/api/v1/employees";
-  static String API_EMP_ONE = "/api/v1/employee/"; //{id}
+  static String API_EMP_ONE = "/users/qodirxon0115"; //{id}
   static String API_EMP_CREATE = "/api/v1/create";
   static String API_EMP_UPDATE = "/api/v1/update/"; //{id}
   static String API_EMP_DELETE = "/api/v1/delete/"; //{id}
@@ -94,9 +95,9 @@ class Network {
     return data;
   }
 
-  static EmpOne parseEmpOne(String body){
+  static Myself parseEmpOne(String body){
     dynamic json = jsonDecode(body);
-    var data = EmpOne.fromJson(json);
+    var data = Myself.fromJson(json);
     return data;
   }
 
